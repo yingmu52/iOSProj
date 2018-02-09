@@ -9,4 +9,5 @@ target 'Connections' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FacebookShare'
+  pod 'Kingfisher', '~> 4.6.1'
 end
