@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -515,31 +516,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connections" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da1-Yy-WmE">
-                                <rect key="frame" x="67" y="79" width="240" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connections" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da1-Yy-WmE">
+                                <rect key="frame" x="81" y="70" width="212" height="50.5"/>
                                 <fontDescription key="fontDescription" name="Modeka" family="Modeka" pointSize="49"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96B-xI-SXf">
-                                <rect key="frame" x="91" y="369" width="193" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="20"/>
-                                <state key="normal" title="Sign up" backgroundImage="GreenButton">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="bc4-6L-AL0" kind="show" id="SvP-Rm-cm0"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ldt_logo" translatesAutoresizingMaskIntoConstraints="NO" id="PaO-fG-ePW">
-                                <rect key="frame" x="67" y="142" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ldt_logo" translatesAutoresizingMaskIntoConstraints="NO" id="PaO-fG-ePW">
+                                <rect key="frame" x="67" y="138.5" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="G5u-bk-IE4"/>
+                                    <constraint firstAttribute="width" secondItem="PaO-fG-ePW" secondAttribute="height" multiplier="15:8" id="cE7-JQ-sVe"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0v-IX-A67">
-                                <rect key="frame" x="91" y="453" width="193" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0v-IX-A67">
+                                <rect key="frame" x="91" y="442.5" width="193" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="F0v-IX-A67" secondAttribute="height" multiplier="193:66" id="NN1-VQ-MKZ"/>
+                                    <constraint firstAttribute="width" constant="193" id="TA5-VY-LGd"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="20"/>
                                 <state key="normal" title="Facebook" backgroundImage="BlueButton">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -548,16 +543,14 @@
                                     <action selector="Facebook:" destination="fp5-om-ptm" eventType="touchUpInside" id="j3b-dd-Efc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzY-dj-OhA">
-                                <rect key="frame" x="67" y="625" width="241" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzY-dj-OhA">
+                                <rect key="frame" x="98" y="600" width="179.5" height="21"/>
                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8b-iE-1tR">
-                                <rect key="frame" x="247" y="620" width="61" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8b-iE-1tR">
+                                <rect key="frame" x="163" y="623" width="49" height="34"/>
                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="17"/>
                                 <state key="normal" title="Sign in">
                                     <color key="titleColor" red="0.23137254901960785" green="0.74509803921568629" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -566,8 +559,36 @@
                                     <segue destination="5N1-Us-mLI" kind="show" id="9Nl-9A-aSk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96B-xI-SXf">
+                                <rect key="frame" x="91" y="361" width="193" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="96B-xI-SXf" secondAttribute="height" multiplier="193:66" id="G1d-46-qcy"/>
+                                    <constraint firstAttribute="width" constant="193" id="Ugo-T0-7qe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="20"/>
+                                <state key="normal" title="Sign up" backgroundImage="GreenButton">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bc4-6L-AL0" kind="show" id="SvP-Rm-cm0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="da1-Yy-WmE" firstAttribute="top" secondItem="pv3-b1-igb" secondAttribute="top" constant="50" id="5Mv-yz-kUe"/>
+                            <constraint firstItem="pv3-b1-igb" firstAttribute="bottom" secondItem="A8b-iE-1tR" secondAttribute="bottom" constant="10" id="5kv-tW-Y1L"/>
+                            <constraint firstItem="A8b-iE-1tR" firstAttribute="centerX" secondItem="CzY-dj-OhA" secondAttribute="centerX" id="7Hv-PU-Nnf"/>
+                            <constraint firstItem="da1-Yy-WmE" firstAttribute="centerX" secondItem="pv3-b1-igb" secondAttribute="centerX" id="CNJ-Tg-puX"/>
+                            <constraint firstItem="PaO-fG-ePW" firstAttribute="top" secondItem="da1-Yy-WmE" secondAttribute="bottom" constant="18" id="IBa-xk-7ob"/>
+                            <constraint firstItem="96B-xI-SXf" firstAttribute="top" secondItem="PaO-fG-ePW" secondAttribute="bottom" constant="95" id="JA0-ZT-nS7"/>
+                            <constraint firstItem="A8b-iE-1tR" firstAttribute="top" secondItem="CzY-dj-OhA" secondAttribute="bottom" constant="2" id="KP5-Xm-Y3h"/>
+                            <constraint firstItem="F0v-IX-A67" firstAttribute="top" secondItem="96B-xI-SXf" secondAttribute="bottom" constant="15" id="MQO-8M-MGZ"/>
+                            <constraint firstItem="PaO-fG-ePW" firstAttribute="centerX" secondItem="da1-Yy-WmE" secondAttribute="centerX" id="Vph-so-JYv"/>
+                            <constraint firstItem="96B-xI-SXf" firstAttribute="centerX" secondItem="PaO-fG-ePW" secondAttribute="centerX" id="aJt-fa-PhB"/>
+                            <constraint firstItem="F0v-IX-A67" firstAttribute="centerX" secondItem="96B-xI-SXf" secondAttribute="centerX" id="eyq-wC-lr0"/>
+                            <constraint firstItem="CzY-dj-OhA" firstAttribute="centerX" secondItem="pv3-b1-igb" secondAttribute="centerX" id="kfA-Nt-nDF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pv3-b1-igb"/>
                     </view>
                 </viewController>
