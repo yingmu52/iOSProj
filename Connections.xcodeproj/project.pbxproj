@@ -31,6 +31,9 @@
 		15EF24612005F2FB00B41D84 /* LandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF24602005F2FB00B41D84 /* LandViewController.swift */; };
 		15EF24632005F57C00B41D84 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF24622005F57C00B41D84 /* CreateAccountViewController.swift */; };
 		15EF24652005F59100B41D84 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF24642005F59100B41D84 /* SignInViewController.swift */; };
+		A02B0D6A202D482A00A711B5 /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A02B0D69202D482A00A711B5 /* Question.storyboard */; };
+		A02B0D6C202D4E4000A711B5 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02B0D6B202D4E4000A711B5 /* QuestionViewController.swift */; };
+		A02B0D6F202D526C00A711B5 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02B0D6E202D526C00A711B5 /* Storyboard.swift */; };
 		A9B1E594794DF669D9AE1964 /* Pods_Connections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51602BA3A3455B7100F90FE /* Pods_Connections.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +68,9 @@
 		15EF24642005F59100B41D84 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		43A0686A85DF8ECB16871CA0 /* Pods-Connections.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Connections.release.xcconfig"; path = "Pods/Target Support Files/Pods-Connections/Pods-Connections.release.xcconfig"; sourceTree = "<group>"; };
 		5A7908A7896A1A975848D666 /* Pods-Connections.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Connections.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Connections/Pods-Connections.debug.xcconfig"; sourceTree = "<group>"; };
+		A02B0D69202D482A00A711B5 /* Question.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Question.storyboard; sourceTree = "<group>"; };
+		A02B0D6B202D4E4000A711B5 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		A02B0D6E202D526C00A711B5 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		D51602BA3A3455B7100F90FE /* Pods_Connections.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Connections.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,6 +106,8 @@
 		15C63F272003E57A00F542AF = {
 			isa = PBXGroup;
 			children = (
+				A02B0D70202D52A900A711B5 /* Storyboard */,
+				A02B0D6D202D525E00A711B5 /* Library */,
 				152AA4E12005DA1C0059CD6F /* Fonts */,
 				15C63F322003E57A00F542AF /* Connections */,
 				15C63F312003E57A00F542AF /* Products */,
@@ -128,9 +136,8 @@
 				15C63F352003E57A00F542AF /* FirstViewController.swift */,
 				154A594020073F02001C5D63 /* ProfileViewController.swift */,
 				15C63F372003E57A00F542AF /* SecondViewController.swift */,
-				15C63F392003E57A00F542AF /* Main.storyboard */,
+				A02B0D6B202D4E4000A711B5 /* QuestionViewController.swift */,
 				15C63F3C2003E57A00F542AF /* Assets.xcassets */,
-				15C63F3E2003E57A00F542AF /* LaunchScreen.storyboard */,
 				15C63F412003E57A00F542AF /* Info.plist */,
 				154A594220074D9E001C5D63 /* UIImageViewWithMask.swift */,
 				15BC78D8200DC15500FCE1DD /* Connections-Bridging-Header.h */,
@@ -150,6 +157,24 @@
 				D51602BA3A3455B7100F90FE /* Pods_Connections.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A02B0D6D202D525E00A711B5 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				A02B0D6E202D526C00A711B5 /* Storyboard.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		A02B0D70202D52A900A711B5 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				15C63F3E2003E57A00F542AF /* LaunchScreen.storyboard */,
+				A02B0D69202D482A00A711B5 /* Question.storyboard */,
+				15C63F392003E57A00F542AF /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		E155BFE226ADEAFF3E5D35CC /* Pods */ = {
@@ -230,6 +255,7 @@
 				152AA4EF2005EC460059CD6F /* SourceSansPro-SemiBold.ttf in Resources */,
 				152AA4E82005E00A0059CD6F /* Raleway-Regular.ttf in Resources */,
 				15C63F3D2003E57A00F542AF /* Assets.xcassets in Resources */,
+				A02B0D6A202D482A00A711B5 /* Question.storyboard in Resources */,
 				152AA4E52005DD600059CD6F /* SourceSansPro-Regular.otf in Resources */,
 				152AA4EB2005E6380059CD6F /* norwester.otf in Resources */,
 				15C63F3B2003E57A00F542AF /* Main.storyboard in Resources */,
@@ -311,7 +337,9 @@
 			files = (
 				154A594320074D9E001C5D63 /* UIImageViewWithMask.swift in Sources */,
 				15EF24632005F57C00B41D84 /* CreateAccountViewController.swift in Sources */,
+				A02B0D6C202D4E4000A711B5 /* QuestionViewController.swift in Sources */,
 				15C63F382003E57A00F542AF /* SecondViewController.swift in Sources */,
+				A02B0D6F202D526C00A711B5 /* Storyboard.swift in Sources */,
 				15EF24652005F59100B41D84 /* SignInViewController.swift in Sources */,
 				15EF24612005F2FB00B41D84 /* LandViewController.swift in Sources */,
 				15BC78DF200DDC0200FCE1DD /* BackTableViewController.swift in Sources */,
@@ -459,7 +487,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M68T95UP7C;
+				DEVELOPMENT_TEAM = 46GF7TV564;
 				INFOPLIST_FILE = Connections/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fbg.Connections;
@@ -478,7 +506,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M68T95UP7C;
+				DEVELOPMENT_TEAM = 46GF7TV564;
 				INFOPLIST_FILE = Connections/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fbg.Connections;
