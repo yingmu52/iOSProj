@@ -36,6 +36,7 @@
 		A02B0D6A202D482A00A711B5 /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A02B0D69202D482A00A711B5 /* Question.storyboard */; };
 		A02B0D6C202D4E4000A711B5 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02B0D6B202D4E4000A711B5 /* QuestionViewController.swift */; };
 		A02B0D6F202D526C00A711B5 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02B0D6E202D526C00A711B5 /* Storyboard.swift */; };
+		A0C39908203D32E70068581F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C39907203D32E70068581F /* PageViewController.swift */; };
 		A9B1E594794DF669D9AE1964 /* Pods_Connections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51602BA3A3455B7100F90FE /* Pods_Connections.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		A02B0D69202D482A00A711B5 /* Question.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Question.storyboard; sourceTree = "<group>"; };
 		A02B0D6B202D4E4000A711B5 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		A02B0D6E202D526C00A711B5 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		A0C39907203D32E70068581F /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		D51602BA3A3455B7100F90FE /* Pods_Connections.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Connections.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -147,6 +149,7 @@
 				15BC78D8200DC15500FCE1DD /* Connections-Bridging-Header.h */,
 				15BC78DC200DD1C100FCE1DD /* NavViewController.swift */,
 				15BC78DE200DDC0200FCE1DD /* BackTableViewController.swift */,
+				A0C39907203D32E70068581F /* PageViewController.swift */,
 			);
 			path = Connections;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				15BD54F12037C0C0003A6FD9 /* CreateAccount.swift in Sources */,
 				15C63F342003E57A00F542AF /* AppDelegate.swift in Sources */,
 				15C63F362003E57A00F542AF /* FirstViewController.swift in Sources */,
+				A0C39908203D32E70068581F /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

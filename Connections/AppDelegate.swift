@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     print("HEEERE")
 //    window?.rootViewController = Storyboard.Question.get(QuestionViewController.self)
+    window?.rootViewController = Storyboard.Question.initialViewController // .get(PageViewController.self)
     FBSDKApplicationDelegate.sharedInstance()
       .application(application, didFinishLaunchingWithOptions: launchOptions)
     let configuration = ParseClientConfiguration {
