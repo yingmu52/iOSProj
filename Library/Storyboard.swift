@@ -13,6 +13,7 @@ enum Storyboard: String {
   case Question
 
   func instantiate<T: UIViewController>(_ viewController: T.Type) -> T {
+    print("inside instantiate")
     guard let vc = UIStoryboard(name: self.rawValue, bundle: nil)
       .instantiateViewController(withIdentifier: T.storyboardID) as? T else {
       fatalError("Couldn't instantiate \(T.storyboardID) from \(self.rawValue)")
@@ -30,6 +31,7 @@ enum Storyboard: String {
 
 extension UIViewController {
   static var storyboardID: String {
+    print("after ext")
     return description().components(separatedBy: ".").dropFirst().joined()
   }
 }

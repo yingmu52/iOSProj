@@ -10,13 +10,15 @@ import UIKit
 
 final class QuestionViewController: UIViewController {
 
+    
+    
   @IBOutlet var imageView1: UIImageView!
   @IBOutlet var imageView2: UIImageView!
   @IBOutlet var imageView3: UIImageView!
   @IBOutlet var imageView4: UIImageView!
   @IBOutlet var questionLabel: UILabel!
 
-  @IBAction func buttonPressed(_ sender: UIButton) {
+  @IBAction func buttonPressed(_ sender: UIImageView) {
     switch sender.tag {
     case 0:
       print("tag 0")

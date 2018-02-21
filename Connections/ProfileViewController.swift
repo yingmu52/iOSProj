@@ -14,17 +14,35 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var porfilePicture: FBSDKProfilePictureView!
     
     @IBOutlet weak var BackButton: UIButton!
+    @IBOutlet weak var NameLabel: UILabel!
+    @IBOutlet weak var NameTextField: UITextField!
+    @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var ProfilePictureDispay: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let mask = UIImageView(image: UIImage(named: "CircleMask.png"))
+        
+        
+        guard let firstName = UserDefaults.standard.string(forKey: "FirstName") as String? else {
+            return
+        }
+        
+        guard let lastName = UserDefaults.standard.string(forKey: "LastName") as String? else{
+            return
+        }
+        NameLabel.text = "\(firstName) \(lastName)"
+        let mask = UIImageView(image: UIImage(named: "Mask.png"))
        
         
         BackButton.addTarget(self.revealViewController(), action:#selector(SWRevealViewController.revealToggle(_:)),for:UIControlEvents.touchUpInside)
        
+        guard let imageURL = UserDefaults.standard.string(forKey: "ProfilePictureURL") as String? else{
+            //TODO load default NOImage Image
+            return
+        }
         
         
-        loadUserImage(fromURL: "https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/10931543_10152742208246225_706482507095750357_n.jpg?oh=74feee94b548e016db653cde8b43dc6b&oe=5AB108E5")
+        print(imageURL)
+        loadUserImage(fromURL: imageURL)
         // Do any additional setup after loading the view.
         ProfilePictureDispay.mask = mask
         ProfilePictureDispay.mask?.layer.frame = ProfilePictureDispay.bounds
@@ -34,11 +52,15 @@ class ProfileViewController: UIViewController {
         porfilePicture.profileID = "10155478932906225"
     }
 
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func displayUserInfo(){
+        
+    }
 
     func loadUserImage(fromURL urlString:String?) {
         if urlString != nil {

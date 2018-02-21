@@ -10,4 +10,5 @@ target 'Connections' do
   pod 'FacebookLogin'
   pod 'FacebookShare'
   pod 'Kingfisher', '~> 4.6.1'
+  pod 'Parse'
 end
