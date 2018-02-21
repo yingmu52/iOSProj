@@ -9,17 +9,14 @@
 import UIKit
 
 class PageViewController: UIPageViewController {
-  let questionsVCs = [
-    Storyboard.Question.get(QuestionViewController.self),
-    Storyboard.Question.get(QuestionViewController.self),
-    Storyboard.Question.get(QuestionViewController.self),
-    Storyboard.Question.get(QuestionViewController.self),
-    Storyboard.Question.get(QuestionViewController.self),
-    Storyboard.Question.get(QuestionViewController.self)
-  ]
+  var questionsVCs = [QuestionViewController]()
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    for _ in 1...50 {
+      let vc = Storyboard.Question.get(QuestionViewController.self)
+      questionsVCs += [vc]
+    }
     dataSource = self
     setViewControllers([questionsVCs[0]], direction: .forward, animated: false, completion: nil)
   }
