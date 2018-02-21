@@ -7,31 +7,13 @@
 //
 
 import Foundation
+import Snakepit
 
-enum Storyboard: String {
+enum Storyboard: String, StoryboardGettable {
   case Main
   case Question
 
-  func instantiate<T: UIViewController>(_ viewController: T.Type) -> T {
-    print("inside instantiate")
-    guard let vc = UIStoryboard(name: self.rawValue, bundle: nil)
-      .instantiateViewController(withIdentifier: T.storyboardID) as? T else {
-      fatalError("Couldn't instantiate \(T.storyboardID) from \(self.rawValue)")
-    }
-    return vc
-  }
-
-  var initialViewController: UIViewController {
-    guard let vc = UIStoryboard(name: self.rawValue, bundle: nil).instantiateInitialViewController() else {
-      fatalError("There should be at least one view controller in a storyboard file")
-    }
-    return vc
-  }
-}
-
-extension UIViewController {
-  static var storyboardID: String {
-    print("after ext")
-    return description().components(separatedBy: ".").dropFirst().joined()
+  var bundle: Bundle? {
+    return Bundle.main
   }
 }

@@ -10,7 +10,7 @@ import UIKit
 import FacebookCore
 import FBSDKCoreKit
 import Parse
-
+import Snakepit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     print("HEEERE")
-  //  window?.rootViewController = Storyboard.Question.instantiate(QuestionViewController.self)
+//    window?.rootViewController = Storyboard.Question.get(QuestionViewController.self)
     FBSDKApplicationDelegate.sharedInstance()
       .application(application, didFinishLaunchingWithOptions: launchOptions)
     let configuration = ParseClientConfiguration {

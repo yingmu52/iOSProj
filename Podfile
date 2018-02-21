@@ -6,6 +6,7 @@ target 'Connections' do
   use_frameworks!
 
   # Pods for Connections
+  pod 'Snakepit', '~> 0.0.5'
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FacebookShare'
