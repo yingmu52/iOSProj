@@ -10,7 +10,17 @@ import UIKit
 
 class SelectionViewController: UIViewController {
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  @IBAction func buttonPressed(_ sender: UIButton) {
+    guard let optionView = sender.superview as? OptionView else { return }
+    let selectedImage = #imageLiteral(resourceName: "Icon")
+    let defaultImage = #imageLiteral(resourceName: "ldt_logo")
+    optionView.heartImageView.image = sender.isSelected ? selectedImage : defaultImage
+    sender.isSelected = !sender.isSelected
+    print(sender.tag)
   }
+}
+
+class OptionView: UIView {
+  @IBOutlet var heartImageView: UIImageView!
+  @IBOutlet var button: UIButton!
 }

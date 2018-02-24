@@ -18,7 +18,22 @@ class PageViewController: UIPageViewController {
       selectionVcs += [vc]
     }
     dataSource = self
+    delegate = self
     setViewControllers([selectionVcs[0]], direction: .forward, animated: false, completion: nil)
+  }
+}
+
+extension PageViewController: UIPageViewControllerDelegate {
+  func pageViewController(_ pageViewController: UIPageViewController,
+                          didFinishAnimating finished: Bool,
+                          previousViewControllers: [UIViewController],
+                          transitionCompleted completed: Bool) {
+    guard let questionVc = parent as? QuestionViewController else {
+      fatalError("please call add child in QuestionViewController")
+    }
+    // grab the question in this page and change the question text to be the label
+    questionVc.questionLabel.text = "haha" + arc4random().description
+    print(questionVc)
   }
 }
 

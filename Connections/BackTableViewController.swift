@@ -29,7 +29,6 @@ class BackTableViewController: UITableViewController {
    
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
         print(TableArray.count)
         return TableArray.count
     }
